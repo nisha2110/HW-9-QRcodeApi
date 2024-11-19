@@ -16,3 +16,7 @@
 8. Goto http://localhost/docs to view openapi spec documentation
 9. Click "authorize" input username: admin password: secret
 10. Test making,  retrieving, and deleting QR codes on the spec page. 
+
+
+
+docker builder prune -a
