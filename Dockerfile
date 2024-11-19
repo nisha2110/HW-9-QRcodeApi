@@ -44,6 +44,5 @@ USER myuser
 
 # Tell Docker about the port we'll run on.
 EXPOSE 8000
-ENTRYPOINT [ "python3", "-m" ]
 
-CMD ["/start.sh"]
+CMD ["/bin/bash", "/start.sh"]
