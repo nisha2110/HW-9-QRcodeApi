@@ -5,6 +5,8 @@ import logging
 from pathlib import Path
 from app.config import SERVER_BASE_URL, SERVER_DOWNLOAD_FOLDER
 
+QR_DIRECTORY = Path(os.getenv("QR_DIRECTORY", "/tmp/qr_codes"))
+
 def list_qr_codes(directory_path: Path) -> List[str]:
     """
     Lists all QR code images in the specified directory by returning their filenames.

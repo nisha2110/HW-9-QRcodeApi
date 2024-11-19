@@ -32,7 +32,7 @@ COPY ./requirements.txt /myapp/requirements.txt
 # Install Python dependencies
 RUN pip install --upgrade pip \
     && pip install -r requirements.txt
-
+RUN mkdir -p /tmp/qr_codes && chmod -R 777 /tmp/qr_codes
 # Copy the rest of your application's code
 COPY . /myapp
 # Copy the startup script and make it executable

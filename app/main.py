@@ -1,8 +1,10 @@
+import os
 from fastapi import FastAPI
 from app.config import QR_DIRECTORY
 from app.routers import qr_code, oauth  # Make sure these imports match your project structure.
 from app.services.qr_service import create_directory
 from app.utils.common import setup_logging
+from pathlib import Path
 
 # This function sets up logging based on the configuration specified in your logging configuration file.
 # It's important for monitoring and debugging.
@@ -10,6 +12,7 @@ setup_logging()
 
 # This ensures that the directory for storing QR codes exists when the application starts.
 # If it doesn't exist, it will be created.
+QR_DIRECTORY = Path(os.getenv("QR_DIRECTORY", "/tmp/qr_codes"))
 create_directory(QR_DIRECTORY)
 
 # This creates an instance of the FastAPI application.
