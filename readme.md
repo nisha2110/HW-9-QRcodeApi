@@ -54,6 +54,9 @@
  4. I did Test making,  retrieving, and deleting QR codes on the spec page. 
  - when I Get qr_codes TryOut and generate view hyperlink and copy this link new tab not generate QR-code.
  
+## Docker Container link :
+-  https://hub.docker.com/repository/docker/nishi2110/hw-9apiqrcode/Tags 
+
 ## Endpoints:
 1. Generate QR Code
 - Use the POST /qr_codes endpoint to create a QR code.
